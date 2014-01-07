@@ -1,0 +1,104 @@
+﻿<controls:MetroWindow x:Class="CONNECT.NET_Client.MainWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      Title="CONNECT.NET" 
+                    
+                       Icon="images/Upload Database.png" AllowsTransparency="True" Loaded="MetroWindow_Loaded"
+                      WindowState="Maximized" Height="601.532" Width="884.5"
+                      
+                      >
+    <controls:MetroWindow.Background>
+        <ImageBrush ImageSource="images/back.png"/>
+    </controls:MetroWindow.Background>
+
+    <!-- your layout here -->
+
+    <StackPanel Margin="0,0,0,-3">
+        <Label>
+            <ToolBar Width="772" RenderTransformOrigin="0.5,0.5" Height="119" >
+                <ToolBar.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.275"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ToolBar.RenderTransform>
+
+
+                <Button x:Name="Email" Click="Email_Click">
+                    <Image Source="images/E-Mail.png" Height="105" Width="121" 
+                         ToolTip="Home"
+                           
+                           />
+                </Button>
+
+                <Button Click="Button_Click">
+                    <Image x:Name="FileUpload" Source="images/Downloads.png" Height="105" Width="121" 
+                           ToolTip="Upload des fichiers"
+                           />
+                </Button>
+
+
+                <Button>
+                    <Image Source="images/_config.png" Height="105" Width="121" 
+                           
+                           ToolTip="Espace de configuration"
+                           />
+                </Button>
+
+
+                <Button>
+                    <Image Source="images/_contact.png" Height="105" Width="121" 
+                           ToolTip="Contactez l'administrateur"
+                           
+                           />
+                </Button>
+
+                <Button Click="Button_Click_2">
+                    <Image Source="images/Power.png" Height="95" Width="121" 
+                           
+                           ToolTip="Deconnexion"
+                           />
+                </Button>
+
+            </ToolBar>
+        </Label>
+        <Label Background="AliceBlue"/>
+        <ListBox x:Name="Files_Explorer" Height="433" RenderTransformOrigin="0.5,0.5" Margin="4,0,-1,0" Opacity="0.8" SelectionChanged="Files_Explorer_SelectionChanged" FontSize="14" FontFamily="SimSun" Cursor="Hand">
+            <ListBox.BorderBrush>
+                <ImageBrush ImageSource="images/Power.png"/>
+            </ListBox.BorderBrush>
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.391"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-3.007"/>
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+
+
+
+    </StackPanel>
+
+    <!-- <DockPanel>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Command="New" Content="New" />
+                <Button Command="Open" Content="Open" />
+                <Button Command="Save" Content="Save" />
+            </ToolBar>
+            <ToolBar>
+                <Button Command="Cut" Content="Cut" />
+                <Button Command="Copy" Content="Copy" />
+                <Button Command="Paste" Content="Paste" />
+            </ToolBar>
+        </ToolBarTray>
+        <TextBox AcceptsReturn="True" />
+    </DockPanel>
+    -->
+
+</controls:MetroWindow>
